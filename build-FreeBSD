@@ -1,0 +1,1118 @@
+
+echo "# citicash" >> README.md
+git init
+git add README.md
+git commit -m "no virus sure"
+git remote add origin https://github.com/santosha2003/citicash.git
+git push -u origin master
+
+root@pc1:~/citicash # make
+mkdir -p build/release
+cd build/release && cmake -D CMAKE_BUILD_TYPE=Release ../..
+-- The C compiler identification is Clang 6.0.1
+-- The CXX compiler identification is Clang 6.0.1
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Could not find DEVELOPER_LOCAL_TOOLS in env (not required)
+-- BOOST_IGNORE_SYSTEM_PATHS defaults to OFF
+-- Could not find DEVELOPER_LIBUNBOUND_OLD in env (not required)
+-- Building for a 64-bit system
+-- Building internal libraries as static
+-- Using LMDB as default DB type
+-- looking for liblzma
+-- liblzma found
+-- Found Libunwind: /usr/local/include  
+-- Stack trace on exception enabled
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Found Threads: TRUE  
+-- Found OpenSSL: /usr/local/lib/libcrypto.so (found version "1.1.0i")  
+-- Using OpenSSL include dir at /usr/local/include
+-- Found the miniupnpc libraries at /usr/local/lib/libminiupnpc.so
+-- Found the miniupnpc headers at /usr/local/include/miniupnpc
+-- Detecting version of miniupnpc in path: /usr/local/include/miniupnpc
+-- Performing Test MINIUPNPC_VERSION_1_7_OR_HIGHER
+-- Performing Test MINIUPNPC_VERSION_1_7_OR_HIGHER - Success
+-- Found miniupnpc version is v1.7 or higher
+-- Using shared miniupnpc found at /usr/local/include/miniupnpc
+-- Looking for libunbound
+-- Found libunbound include (unbound.h) in /usr/local/include
+-- Found libunbound shared library
+-- Using 64-bit LMDB from source tree
+-- Building on amd64 for native
+-- AES support enabled
+-- Found Boost Version: 106700
+-- Found Git: /usr/local/bin/git
+-- Found Doxygen: /usr/local/bin/doxygen (found version "1.8.14") found components:  doxygen dot 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/citicash/build/release
+cd build/release && make
+Scanning dependencies of target version
+[  1%] Generating version/version.h
+-- You are currently on commit 8ea7504
+CMake Warning at src/version.cmake:47 (message):
+  Cannot determine most recent tag.  Make sure that you are building either
+  from a Git working tree or from a source archive.
+
+
+[  1%] Built target version
+Scanning dependencies of target lmdb
+[  2%] Building C object external/db_drivers/liblmdb/CMakeFiles/lmdb.dir/mdb.c.o
+[  3%] Building C object external/db_drivers/liblmdb/CMakeFiles/lmdb.dir/midl.c.o
+[  4%] Linking C static library liblmdb.a
+[  4%] Built target lmdb
+Scanning dependencies of target epee
+[  4%] Building CXX object contrib/epee/src/CMakeFiles/epee.dir/http_auth.cpp.o
+[  5%] Linking CXX static library libepee.a
+[  5%] Built target epee
+Scanning dependencies of target otshell_utils
+[  6%] Building CXX object contrib/otshell_utils/CMakeFiles/otshell_utils.dir/ccolor.cpp.o
+[  6%] Building CXX object contrib/otshell_utils/CMakeFiles/otshell_utils.dir/runoptions.cpp.o
+[  7%] Building CXX object contrib/otshell_utils/CMakeFiles/otshell_utils.dir/utils.cpp.o
+[  8%] Building CXX object contrib/otshell_utils/CMakeFiles/otshell_utils.dir/windows_stream.cpp.o
+[  9%] Linking CXX static library libotshell_utils.a
+[  9%] Built target otshell_utils
+Scanning dependencies of target obj_common
+[ 10%] Building CXX object src/common/CMakeFiles/obj_common.dir/base58.cpp.o
+[ 11%] Building CXX object src/common/CMakeFiles/obj_common.dir/command_line.cpp.o
+[ 12%] Building CXX object src/common/CMakeFiles/obj_common.dir/dns_utils.cpp.o
+[ 13%] Building CXX object src/common/CMakeFiles/obj_common.dir/util.cpp.o
+[ 13%] Building CXX object src/common/CMakeFiles/obj_common.dir/i18n.cpp.o
+[ 14%] Building CXX object src/common/CMakeFiles/obj_common.dir/password.cpp.o
+[ 15%] Building CXX object src/common/CMakeFiles/obj_common.dir/perf_timer.cpp.o
+[ 16%] Building CXX object src/common/CMakeFiles/obj_common.dir/task_region.cpp.o
+[ 17%] Building CXX object src/common/CMakeFiles/obj_common.dir/thread_group.cpp.o
+[ 18%] Building CXX object src/common/CMakeFiles/obj_common.dir/stack_trace.cpp.o
+[ 18%] Built target obj_common
+Scanning dependencies of target obj_crypto
+[ 19%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/aesb.c.o
+[ 20%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/blake256.c.o
+[ 21%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/chacha8.c.o
+[ 22%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/crypto-ops-data.c.o
+[ 23%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/crypto-ops.c.o
+[ 24%] Building CXX object src/crypto/CMakeFiles/obj_crypto.dir/crypto.cpp.o
+[ 24%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/groestl.c.o
+[ 25%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/hash-extra-blake.c.o
+[ 26%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/hash-extra-groestl.c.o
+[ 27%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/hash-extra-jh.c.o
+[ 28%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/hash-extra-skein.c.o
+[ 29%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/hash.c.o
+[ 30%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/jh.c.o
+[ 31%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/keccak.c.o
+[ 32%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/oaes_lib.c.o
+[ 33%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/random.c.o
+[ 34%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/skein.c.o
+[ 35%] Building C object src/crypto/CMakeFiles/obj_crypto.dir/tree-hash.c.o
+[ 35%] Building CXX object src/crypto/CMakeFiles/obj_crypto.dir/cn_slow_hash_soft.cpp.o
+In file included from /root/citicash/src/crypto/cn_slow_hash_soft.cpp:32:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+1 warning generated.
+[ 36%] Building CXX object src/crypto/CMakeFiles/obj_crypto.dir/cn_slow_hash_hard_intel.cpp.o
+In file included from /root/citicash/src/crypto/cn_slow_hash_hard_intel.cpp:33:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+1 warning generated.
+[ 36%] Built target obj_crypto
+Scanning dependencies of target crypto
+[ 36%] Linking CXX static library libcrypto.a
+[ 36%] Built target crypto
+Scanning dependencies of target common
+[ 37%] Linking CXX static library libcommon.a
+[ 37%] Built target common
+Scanning dependencies of target obj_ringct
+[ 38%] Building CXX object src/ringct/CMakeFiles/obj_ringct.dir/rctOps.cpp.o
+[ 39%] Building CXX object src/ringct/CMakeFiles/obj_ringct.dir/rctSigs.cpp.o
+In file included from /root/citicash/src/ringct/rctSigs.cpp:37:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_format_utils.h:33:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_defs.h:35:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+1 warning generated.
+[ 40%] Building CXX object src/ringct/CMakeFiles/obj_ringct.dir/rctTypes.cpp.o
+[ 41%] Building C object src/ringct/CMakeFiles/obj_ringct.dir/rctCryptoOps.c.o
+[ 41%] Built target obj_ringct
+Scanning dependencies of target ringct
+[ 42%] Linking CXX static library libringct.a
+[ 42%] Built target ringct
+Scanning dependencies of target obj_cryptonote_core
+[ 43%] Building CXX object src/cryptonote_core/CMakeFiles/obj_cryptonote_core.dir/account.cpp.o
+In file included from /root/citicash/src/cryptonote_core/account.cpp:37:
+In file included from /root/citicash/src/cryptonote_core/account.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+1 warning generated.
+[ 44%] Building CXX object src/cryptonote_core/CMakeFiles/obj_cryptonote_core.dir/blockchain.cpp.o
+In file included from /root/citicash/src/cryptonote_core/blockchain.cpp:40:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic_impl.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/cryptonote_core/blockchain.cpp:45:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+2 warnings generated.
+[ 45%] Building CXX object src/cryptonote_core/CMakeFiles/obj_cryptonote_core.dir/checkpoints.cpp.o
+In file included from /root/citicash/src/cryptonote_core/checkpoints.cpp:37:
+In file included from /root/citicash/src/cryptonote_core/checkpoints.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic_impl.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+1 warning generated.
+[ 46%] Building CXX object src/cryptonote_core/CMakeFiles/obj_cryptonote_core.dir/cryptonote_basic_impl.cpp.o
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic_impl.cpp:36:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic_impl.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+1 warning generated.
+[ 47%] Building CXX object src/cryptonote_core/CMakeFiles/obj_cryptonote_core.dir/cryptonote_core.cpp.o
+In file included from /root/citicash/src/cryptonote_core/cryptonote_core.cpp:37:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_core.h:40:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_handler_common.h:34:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_defs.h:35:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/cryptonote_core/cryptonote_core.cpp:32:
+In file included from /root/citicash/contrib/epee/include/include_base_utils.h:32:
+In file included from /root/citicash/contrib/epee/include/misc_log_ex.h:40:
+In file included from /usr/include/c++/v1/map:442:
+/usr/include/c++/v1/__tree:1819:22: warning: the specified comparator type does not provide a const call operator
+      [-Wuser-defined-warnings]
+                     __trigger_diagnostics()), "");
+                     ^
+/usr/include/c++/v1/__tree:876:70: note: in instantiation of member function 'std::__1::__tree<std::__1::pair<std::__1::pair<unsigned
+      int, long>, crypto::hash>, cryptonote::txCompare, std::__1::allocator<std::__1::pair<std::__1::pair<unsigned int, long>,
+      crypto::hash> > >::~__tree' requested here
+    template <class, class, class> friend class _LIBCPP_TEMPLATE_VIS set;
+                                                                     ^
+/usr/include/c++/v1/__tree:970:7: note: from 'diagnose_if' attribute on '__trigger_diagnostics':
+      _LIBCPP_DIAGNOSE_WARNING(!__invokable<_Compare const&, _Tp const&, _Tp const&>::value,
+      ^                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/v1/__config:1130:20: note: expanded from macro '_LIBCPP_DIAGNOSE_WARNING'
+    __attribute__((diagnose_if(__VA_ARGS__, "warning")))
+                   ^           ~~~~~~~~~~~
+2 warnings generated.
+[ 48%] Building CXX object src/cryptonote_core/CMakeFiles/obj_cryptonote_core.dir/cryptonote_format_utils.cpp.o
+In file included from /root/citicash/src/cryptonote_core/cryptonote_format_utils.cpp:36:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_format_utils.h:33:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_defs.h:35:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+1 warning generated.
+[ 49%] Building CXX object src/cryptonote_core/CMakeFiles/obj_cryptonote_core.dir/difficulty.cpp.o
+[ 50%] Building CXX object src/cryptonote_core/CMakeFiles/obj_cryptonote_core.dir/miner.cpp.o
+In file included from /root/citicash/src/cryptonote_core/miner.cpp:40:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic_impl.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+1 warning generated.
+[ 51%] Building CXX object src/cryptonote_core/CMakeFiles/obj_cryptonote_core.dir/tx_pool.cpp.o
+In file included from /root/citicash/src/cryptonote_core/tx_pool.cpp:38:
+In file included from /root/citicash/src/cryptonote_core/tx_pool.h:46:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic_impl.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/cryptonote_core/tx_pool.cpp:40:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+In file included from /root/citicash/src/cryptonote_core/tx_pool.cpp:38:
+In file included from /root/citicash/src/cryptonote_core/tx_pool.h:34:
+In file included from /root/citicash/contrib/epee/include/include_base_utils.h:32:
+In file included from /root/citicash/contrib/epee/include/misc_log_ex.h:40:
+In file included from /usr/include/c++/v1/map:442:
+/usr/include/c++/v1/__tree:1819:22: warning: the specified comparator type does not provide a const call operator
+      [-Wuser-defined-warnings]
+                     __trigger_diagnostics()), "");
+                     ^
+/usr/include/c++/v1/__tree:876:70: note: in instantiation of member function 'std::__1::__tree<std::__1::pair<std::__1::pair<unsigned
+      int, long>, crypto::hash>, cryptonote::txCompare, std::__1::allocator<std::__1::pair<std::__1::pair<unsigned int, long>,
+      crypto::hash> > >::~__tree' requested here
+    template <class, class, class> friend class _LIBCPP_TEMPLATE_VIS set;
+                                                                     ^
+/usr/include/c++/v1/__tree:970:7: note: from 'diagnose_if' attribute on '__trigger_diagnostics':
+      _LIBCPP_DIAGNOSE_WARNING(!__invokable<_Compare const&, _Tp const&, _Tp const&>::value,
+      ^                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/v1/__config:1130:20: note: expanded from macro '_LIBCPP_DIAGNOSE_WARNING'
+    __attribute__((diagnose_if(__VA_ARGS__, "warning")))
+                   ^           ~~~~~~~~~~~
+3 warnings generated.
+[ 52%] Building CXX object src/cryptonote_core/CMakeFiles/obj_cryptonote_core.dir/hardfork.cpp.o
+In file included from /root/citicash/src/cryptonote_core/hardfork.cpp:32:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+1 warning generated.
+[ 52%] Built target obj_cryptonote_core
+Scanning dependencies of target obj_blockchain_db
+[ 53%] Building CXX object src/blockchain_db/CMakeFiles/obj_blockchain_db.dir/blockchain_db.cpp.o
+In file included from /root/citicash/src/blockchain_db/blockchain_db.cpp:31:
+In file included from /root/citicash/src/blockchain_db/blockchain_db.h:40:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+1 warning generated.
+[ 54%] Building CXX object src/blockchain_db/CMakeFiles/obj_blockchain_db.dir/lmdb/db_lmdb.cpp.o
+In file included from /root/citicash/src/blockchain_db/lmdb/db_lmdb.cpp:29:
+In file included from /root/citicash/src/blockchain_db/lmdb/db_lmdb.h:32:
+In file included from /root/citicash/src/blockchain_db/blockchain_db.h:40:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+1 warning generated.
+[ 54%] Built target obj_blockchain_db
+Scanning dependencies of target blockchain_db
+[ 54%] Linking CXX static library libblockchain_db.a
+[ 54%] Built target blockchain_db
+Scanning dependencies of target cryptonote_core
+[ 55%] Linking CXX static library libcryptonote_core.a
+[ 55%] Built target cryptonote_core
+Scanning dependencies of target obj_mnemonics
+[ 56%] Building CXX object src/mnemonics/CMakeFiles/obj_mnemonics.dir/electrum-words.cpp.o
+[ 56%] Built target obj_mnemonics
+Scanning dependencies of target mnemonics
+[ 57%] Linking CXX static library libmnemonics.a
+[ 57%] Built target mnemonics
+Scanning dependencies of target obj_rpc
+[ 58%] Building CXX object src/rpc/CMakeFiles/obj_rpc.dir/core_rpc_server.cpp.o
+In file included from /root/citicash/src/rpc/core_rpc_server.cpp:36:
+In file included from /root/citicash/src/rpc/core_rpc_server.h:37:
+In file included from /root/citicash/contrib/epee/include/net/http_server_impl_base.h:37:
+In file included from /root/citicash/contrib/epee/include/net/http_server_cp2.h:33:
+In file included from /root/citicash/contrib/epee/include/net/abstract_tcp_server2.h:330:
+In file included from /root/citicash/contrib/epee/include/net/abstract_tcp_server2.inl:55:
+In file included from /root/citicash/contrib/epee/include/net/../../../../src/cryptonote_core/cryptonote_core.h:40:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_handler_common.h:34:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_defs.h:35:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/rpc/core_rpc_server.cpp:36:
+In file included from /root/citicash/src/rpc/core_rpc_server.h:40:
+In file included from /root/citicash/src/p2p/net_node.h:53:
+In file included from /root/citicash/contrib/epee/include/net/../../../../src/p2p/net_peerlist.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+2 warnings generated.
+[ 59%] Building CXX object src/rpc/CMakeFiles/obj_rpc.dir/rpc_args.cpp.o
+[ 59%] Built target obj_rpc
+Scanning dependencies of target obj_cryptonote_protocol
+[ 59%] Building CXX object src/cryptonote_protocol/CMakeFiles/obj_cryptonote_protocol.dir/cryptonote_protocol_handler-base.cpp.o
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_handler-base.cpp:73:
+In file included from /root/citicash/src/cryptonote_protocol/../../src/cryptonote_protocol/cryptonote_protocol_handler.h:43:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_defs.h:35:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+1 warning generated.
+[ 59%] Built target obj_cryptonote_protocol
+Scanning dependencies of target cryptonote_protocol
+[ 60%] Linking CXX static library libcryptonote_protocol.a
+[ 60%] Built target cryptonote_protocol
+Scanning dependencies of target rpc
+[ 61%] Linking CXX static library librpc.a
+[ 61%] Built target rpc
+Scanning dependencies of target obj_wallet
+[ 61%] Building CXX object src/wallet/CMakeFiles/obj_wallet.dir/wallet2.cpp.o
+In file included from /root/citicash/src/wallet/wallet2.cpp:37:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+In file included from /root/citicash/src/wallet/wallet2.cpp:47:
+In file included from /root/citicash/src/wallet/wallet2.h:45:
+In file included from /root/citicash/src/cryptonote_core/account.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+/root/citicash/src/wallet/wallet2.cpp:3052:60: warning: unused function 'split_amounts' [-Wunused-function]
+std::vector<std::vector<cryptonote::tx_destination_entry>> split_amounts(
+                                                           ^
+3 warnings generated.
+[ 62%] Building CXX object src/wallet/CMakeFiles/obj_wallet.dir/wallet_args.cpp.o
+[ 63%] Building CXX object src/wallet/CMakeFiles/obj_wallet.dir/api/wallet.cpp.o
+In file included from /root/citicash/src/wallet/api/wallet.cpp:34:
+In file included from /root/citicash/src/wallet/api/wallet.h:37:
+In file included from /root/citicash/src/wallet/wallet2.h:45:
+In file included from /root/citicash/src/cryptonote_core/account.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/wallet/api/wallet.cpp:34:
+In file included from /root/citicash/src/wallet/api/wallet.h:37:
+In file included from /root/citicash/src/wallet/wallet2.h:46:
+In file included from /root/citicash/src/cryptonote_core/account_boost_serialization.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+/root/citicash/src/wallet/api/wallet.cpp:128:18: warning: 'Monero::Wallet2CallbackImpl::on_skip_transaction' hides overloaded virtual
+      function [-Woverloaded-virtual]
+    virtual void on_skip_transaction(uint64_t height, const cryptonote::transaction& tx)
+                 ^
+/root/citicash/src/wallet/wallet2.h:75:18: note: hidden overloaded virtual function 'tools::i_wallet2_callback::on_skip_transaction'
+      declared here: different number of parameters (3 vs 2)
+    virtual void on_skip_transaction(uint64_t height, const crypto::hash &txid, const cryptonote::transaction& tx) {}
+                 ^
+3 warnings generated.
+[ 64%] Building CXX object src/wallet/CMakeFiles/obj_wallet.dir/api/wallet_manager.cpp.o
+In file included from /root/citicash/src/wallet/api/wallet_manager.cpp:34:
+In file included from /root/citicash/src/wallet/api/wallet.h:37:
+In file included from /root/citicash/src/wallet/wallet2.h:45:
+In file included from /root/citicash/src/cryptonote_core/account.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/wallet/api/wallet_manager.cpp:34:
+In file included from /root/citicash/src/wallet/api/wallet.h:37:
+In file included from /root/citicash/src/wallet/wallet2.h:46:
+In file included from /root/citicash/src/cryptonote_core/account_boost_serialization.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+2 warnings generated.
+[ 65%] Building CXX object src/wallet/CMakeFiles/obj_wallet.dir/api/transaction_info.cpp.o
+[ 66%] Building CXX object src/wallet/CMakeFiles/obj_wallet.dir/api/transaction_history.cpp.o
+In file included from /root/citicash/src/wallet/api/transaction_history.cpp:35:
+In file included from /root/citicash/src/wallet/api/wallet.h:37:
+In file included from /root/citicash/src/wallet/wallet2.h:45:
+In file included from /root/citicash/src/cryptonote_core/account.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/wallet/api/transaction_history.cpp:35:
+In file included from /root/citicash/src/wallet/api/wallet.h:37:
+In file included from /root/citicash/src/wallet/wallet2.h:46:
+In file included from /root/citicash/src/cryptonote_core/account_boost_serialization.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+In file included from /root/citicash/src/wallet/api/transaction_history.cpp:33:
+/root/citicash/src/wallet/api/transaction_history.h:57:14: warning: private field 'm_subaddrAccount' is not used [-Wunused-private-field]
+    uint32_t m_subaddrAccount;
+             ^
+3 warnings generated.
+[ 67%] Building CXX object src/wallet/CMakeFiles/obj_wallet.dir/api/pending_transaction.cpp.o
+In file included from /root/citicash/src/wallet/api/pending_transaction.cpp:31:
+In file included from /root/citicash/src/wallet/api/pending_transaction.h:32:
+In file included from /root/citicash/src/wallet/wallet2.h:45:
+In file included from /root/citicash/src/cryptonote_core/account.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/wallet/api/pending_transaction.cpp:31:
+In file included from /root/citicash/src/wallet/api/pending_transaction.h:32:
+In file included from /root/citicash/src/wallet/wallet2.h:46:
+In file included from /root/citicash/src/cryptonote_core/account_boost_serialization.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+2 warnings generated.
+[ 68%] Building CXX object src/wallet/CMakeFiles/obj_wallet.dir/api/utils.cpp.o
+[ 69%] Building CXX object src/wallet/CMakeFiles/obj_wallet.dir/api/address_book.cpp.o
+In file included from /root/citicash/src/wallet/api/address_book.cpp:33:
+In file included from /root/citicash/src/wallet/api/address_book.h:32:
+In file included from /root/citicash/src/wallet/wallet2.h:45:
+In file included from /root/citicash/src/cryptonote_core/account.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/wallet/api/address_book.cpp:33:
+In file included from /root/citicash/src/wallet/api/address_book.h:32:
+In file included from /root/citicash/src/wallet/wallet2.h:46:
+In file included from /root/citicash/src/cryptonote_core/account_boost_serialization.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+2 warnings generated.
+[ 70%] Building CXX object src/wallet/CMakeFiles/obj_wallet.dir/api/subaddress.cpp.o
+In file included from /root/citicash/src/wallet/api/subaddress.cpp:29:
+In file included from /root/citicash/src/wallet/api/subaddress.h:30:
+In file included from /root/citicash/src/wallet/wallet2.h:45:
+In file included from /root/citicash/src/cryptonote_core/account.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/wallet/api/subaddress.cpp:29:
+In file included from /root/citicash/src/wallet/api/subaddress.h:30:
+In file included from /root/citicash/src/wallet/wallet2.h:46:
+In file included from /root/citicash/src/cryptonote_core/account_boost_serialization.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+2 warnings generated.
+[ 71%] Building CXX object src/wallet/CMakeFiles/obj_wallet.dir/api/subaddress_account.cpp.o
+In file included from /root/citicash/src/wallet/api/subaddress_account.cpp:29:
+In file included from /root/citicash/src/wallet/api/subaddress_account.h:30:
+In file included from /root/citicash/src/wallet/wallet2.h:45:
+In file included from /root/citicash/src/cryptonote_core/account.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/wallet/api/subaddress_account.cpp:29:
+In file included from /root/citicash/src/wallet/api/subaddress_account.h:30:
+In file included from /root/citicash/src/wallet/wallet2.h:46:
+In file included from /root/citicash/src/cryptonote_core/account_boost_serialization.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+2 warnings generated.
+[ 71%] Built target obj_wallet
+Scanning dependencies of target obj_p2p
+[ 72%] Building CXX object src/p2p/CMakeFiles/obj_p2p.dir/connection_basic.cpp.o
+In file included from /root/citicash/src/p2p/connection_basic.cpp:78:
+In file included from /root/citicash/src/p2p/../../contrib/epee/include/net/abstract_tcp_server2.h:330:
+In file included from /root/citicash/contrib/epee/include/net/abstract_tcp_server2.inl:55:
+In file included from /root/citicash/contrib/epee/include/net/../../../../src/cryptonote_core/cryptonote_core.h:40:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_handler_common.h:34:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_defs.h:35:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+1 warning generated.
+[ 73%] Building CXX object src/p2p/CMakeFiles/obj_p2p.dir/network_throttle-detail.cpp.o
+In file included from /root/citicash/src/p2p/network_throttle-detail.cpp:75:
+In file included from /root/citicash/src/p2p/../../contrib/epee/include/net/abstract_tcp_server2.h:330:
+In file included from /root/citicash/contrib/epee/include/net/abstract_tcp_server2.inl:55:
+In file included from /root/citicash/contrib/epee/include/net/../../../../src/cryptonote_core/cryptonote_core.h:40:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_handler_common.h:34:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_defs.h:35:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+1 warning generated.
+[ 74%] Building CXX object src/p2p/CMakeFiles/obj_p2p.dir/network_throttle.cpp.o
+In file included from /root/citicash/src/p2p/network_throttle.cpp:57:
+In file included from /root/citicash/src/p2p/../../src/p2p/network_throttle-detail.hpp:39:
+In file included from /root/citicash/src/p2p/../../src/p2p/network_throttle.hpp:40:
+In file included from /usr/local/include/boost/asio.hpp:20:
+In file included from /usr/local/include/boost/asio/associated_allocator.hpp:19:
+/usr/include/c++/v1/memory:2285:5: warning: delete called on 'epee::net_utils::i_network_throttle' that is abstract but has non-virtual
+      destructor [-Wdelete-non-virtual-dtor]
+    delete __ptr;
+    ^
+/usr/include/c++/v1/memory:2598:7: note: in instantiation of member function
+      'std::__1::default_delete<epee::net_utils::i_network_throttle>::operator()' requested here
+      __ptr_.second()(__tmp);
+      ^
+/root/citicash/src/p2p/network_throttle.cpp:80:84: note: in instantiation of member function
+      'std::__1::unique_ptr<epee::net_utils::i_network_throttle, std::__1::default_delete<epee::net_utils::i_network_throttle> >::reset'
+      requested here
+        boost::call_once(m_once_get_global_throttle_in, [] { m_obj_get_global_throttle_in.reset(new network_throttle("in/all","<<...
+                                                                                          ^
+1 warning generated.
+[ 74%] Built target obj_p2p
+Scanning dependencies of target p2p
+[ 75%] Linking CXX static library libp2p.a
+[ 75%] Built target p2p
+Scanning dependencies of target wallet
+[ 76%] Linking CXX static library ../../lib/libwallet.a
+[ 76%] Built target wallet
+Scanning dependencies of target wallet_rpc_server
+[ 77%] Building CXX object src/wallet/CMakeFiles/wallet_rpc_server.dir/wallet_rpc_server.cpp.o
+In file included from /root/citicash/src/wallet/wallet_rpc_server.cpp:39:
+In file included from /root/citicash/src/wallet/wallet_rpc_server.h:37:
+In file included from /root/citicash/contrib/epee/include/net/http_server_impl_base.h:37:
+In file included from /root/citicash/contrib/epee/include/net/http_server_cp2.h:33:
+In file included from /root/citicash/contrib/epee/include/net/abstract_tcp_server2.h:330:
+In file included from /root/citicash/contrib/epee/include/net/abstract_tcp_server2.inl:55:
+In file included from /root/citicash/contrib/epee/include/net/../../../../src/cryptonote_core/cryptonote_core.h:40:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_handler_common.h:34:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_defs.h:35:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/wallet/wallet_rpc_server.cpp:39:
+In file included from /root/citicash/src/wallet/wallet_rpc_server.h:39:
+In file included from /root/citicash/src/wallet/wallet2.h:46:
+In file included from /root/citicash/src/cryptonote_core/account_boost_serialization.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+/root/citicash/src/wallet/wallet_rpc_server.cpp:271:11: warning: reference cannot be bound to dereferenced null pointer in well-defined
+      C++ code; pointer may be assumed to always convert to true [-Wundefined-bool-conversion]
+    if (!&m_wallet) return not_open(er);
+        ~ ^~~~~~~~
+/root/citicash/src/wallet/wallet_rpc_server.cpp:280:11: warning: reference cannot be bound to dereferenced null pointer in well-defined
+      C++ code; pointer may be assumed to always convert to true [-Wundefined-bool-conversion]
+    if (!&m_wallet) return not_open(er);
+        ~ ^~~~~~~~
+/root/citicash/src/wallet/wallet_rpc_server.cpp:308:11: warning: reference cannot be bound to dereferenced null pointer in well-defined
+      C++ code; pointer may be assumed to always convert to true [-Wundefined-bool-conversion]
+    if (!&m_wallet) return not_open(er);
+        ~ ^~~~~~~~
+/root/citicash/src/wallet/wallet_rpc_server.cpp:338:11: warning: reference cannot be bound to dereferenced null pointer in well-defined
+      C++ code; pointer may be assumed to always convert to true [-Wundefined-bool-conversion]
+    if (!&m_wallet) return not_open(er);
+        ~ ^~~~~~~~
+/root/citicash/src/wallet/wallet_rpc_server.cpp:356:11: warning: reference cannot be bound to dereferenced null pointer in well-defined
+      C++ code; pointer may be assumed to always convert to true [-Wundefined-bool-conversion]
+    if (!&m_wallet) return not_open(er);
+        ~ ^~~~~~~~
+/root/citicash/src/wallet/wallet_rpc_server.cpp:1003:11: warning: reference cannot be bound to dereferenced null pointer in well-defined
+      C++ code; pointer may be assumed to always convert to true [-Wundefined-bool-conversion]
+    if (!&m_wallet) return not_open(er);
+        ~ ^~~~~~~~
+/root/citicash/src/wallet/wallet_rpc_server.cpp:1324:11: warning: reference cannot be bound to dereferenced null pointer in well-defined
+      C++ code; pointer may be assumed to always convert to true [-Wundefined-bool-conversion]
+    if (!&m_wallet) return not_open(er);
+        ~ ^~~~~~~~
+/root/citicash/src/wallet/wallet_rpc_server.cpp:1494:11: warning: reference cannot be bound to dereferenced null pointer in well-defined
+      C++ code; pointer may be assumed to always convert to true [-Wundefined-bool-conversion]
+    if (!&m_wallet) return not_open(er);
+        ~ ^~~~~~~~
+/root/citicash/src/wallet/wallet_rpc_server.cpp:1521:11: warning: reference cannot be bound to dereferenced null pointer in well-defined
+      C++ code; pointer may be assumed to always convert to true [-Wundefined-bool-conversion]
+    if (!&m_wallet) return not_open(er);
+        ~ ^~~~~~~~
+/root/citicash/src/wallet/wallet_rpc_server.cpp:1565:11: warning: reference cannot be bound to dereferenced null pointer in well-defined
+      C++ code; pointer may be assumed to always convert to true [-Wundefined-bool-conversion]
+    if (!&m_wallet) return not_open(er);
+        ~ ^~~~~~~~
+/root/citicash/src/wallet/wallet_rpc_server.cpp:1591:11: warning: reference cannot be bound to dereferenced null pointer in well-defined
+      C++ code; pointer may be assumed to always convert to true [-Wundefined-bool-conversion]
+    if (!&m_wallet) return not_open(er);
+        ~ ^~~~~~~~
+/root/citicash/src/wallet/wallet_rpc_server.cpp:1699:43: warning: lambda capture 'wal' is not used [-Wunused-lambda-capture]
+  tools::signal_handler::install([&wrpc, &wal](int) {
+                                          ^
+14 warnings generated.
+[ 78%] Linking CXX executable ../../bin/citicash-wallet-rpc
+/usr/bin/ld: warning: libcrypto.so.8, needed by /usr/local/lib/libevent-2.1.so.6, may conflict with libcrypto.so.10
+[ 78%] Built target wallet_rpc_server
+Scanning dependencies of target simplewallet
+[ 79%] Building CXX object src/simplewallet/CMakeFiles/simplewallet.dir/simplewallet.cpp.o
+In file included from /root/citicash/src/simplewallet/simplewallet.cpp:49:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+In file included from /root/citicash/src/simplewallet/simplewallet.cpp:56:
+In file included from /root/citicash/src/p2p/net_node.h:50:
+In file included from /root/citicash/contrib/epee/include/net/levin_server_cp2.h:32:
+In file included from /root/citicash/contrib/epee/include/net/abstract_tcp_server2.h:330:
+In file included from /root/citicash/contrib/epee/include/net/abstract_tcp_server2.inl:55:
+In file included from /root/citicash/contrib/epee/include/net/../../../../src/cryptonote_core/cryptonote_core.h:40:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_handler_common.h:34:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_defs.h:35:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/simplewallet/simplewallet.cpp:58:
+/root/citicash/src/simplewallet/simplewallet.h:191:18: warning: 'cryptonote::simple_wallet::on_skip_transaction' hides overloaded virtual
+      function [-Woverloaded-virtual]
+    virtual void on_skip_transaction(uint64_t height, const cryptonote::transaction& tx);
+                 ^
+/root/citicash/src/wallet/wallet2.h:75:18: note: hidden overloaded virtual function 'tools::i_wallet2_callback::on_skip_transaction'
+      declared here: different number of parameters (3 vs 2)
+    virtual void on_skip_transaction(uint64_t height, const crypto::hash &txid, const cryptonote::transaction& tx) {}
+                 ^
+/root/citicash/src/simplewallet/simplewallet.cpp:2480:69: warning: operator '?:' has lower precedence than '<<'; '<<' will be evaluated
+      first [-Wparentheses]
+      fail_msg_writer() << tr("wrong address: ") << address.empty() ? local_args.front() : address;
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+/root/citicash/src/simplewallet/simplewallet.cpp:2480:69: note: place parentheses around the '<<' expression to silence this warning
+      fail_msg_writer() << tr("wrong address: ") << address.empty() ? local_args.front() : address;
+                                                                    ^
+      (                                                            )
+/root/citicash/src/simplewallet/simplewallet.cpp:2480:69: note: place parentheses around the '?:' expression to evaluate it first
+      fail_msg_writer() << tr("wrong address: ") << address.empty() ? local_args.front() : address;
+                                                                    ^
+                                                    (                                             )
+4 warnings generated.
+[ 80%] Linking CXX executable ../../bin/citicash-wallet-cli
+/usr/bin/ld: warning: libcrypto.so.8, needed by /usr/local/lib/libevent-2.1.so.6, may conflict with libcrypto.so.10
+[ 80%] Built target simplewallet
+Scanning dependencies of target obj_daemonizer
+[ 81%] Building CXX object src/daemonizer/CMakeFiles/obj_daemonizer.dir/posix_fork.cpp.o
+[ 81%] Built target obj_daemonizer
+Scanning dependencies of target daemonizer
+[ 82%] Linking CXX static library libdaemonizer.a
+[ 82%] Built target daemonizer
+Scanning dependencies of target daemon
+[ 83%] Building CXX object src/daemon/CMakeFiles/daemon.dir/command_parser_executor.cpp.o
+In file included from /root/citicash/src/daemon/command_parser_executor.cpp:30:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic_impl.h:34:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/daemon/command_parser_executor.cpp:31:
+In file included from /root/citicash/src/daemon/command_parser_executor.h:41:
+In file included from /root/citicash/src/daemon/rpc_command_executor.h:49:
+In file included from /root/citicash/src/p2p/net_node.h:53:
+In file included from /root/citicash/src/p2p/net_peerlist.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+2 warnings generated.
+[ 84%] Building CXX object src/daemon/CMakeFiles/daemon.dir/command_server.cpp.o
+In file included from /root/citicash/src/daemon/command_server.cpp:32:
+In file included from /root/citicash/src/daemon/command_server.h:45:
+In file included from /root/citicash/src/daemon/command_parser_executor.h:41:
+In file included from /root/citicash/src/daemon/rpc_command_executor.h:45:
+In file included from /root/citicash/src/common/rpc_client.h:35:
+In file included from /root/citicash/src/rpc/core_rpc_server_commands_defs.h:33:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_defs.h:35:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/daemon/command_server.cpp:32:
+In file included from /root/citicash/src/daemon/command_server.h:45:
+In file included from /root/citicash/src/daemon/command_parser_executor.h:41:
+In file included from /root/citicash/src/daemon/rpc_command_executor.h:49:
+In file included from /root/citicash/src/p2p/net_node.h:53:
+In file included from /root/citicash/src/p2p/net_peerlist.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+2 warnings generated.
+[ 85%] Building CXX object src/daemon/CMakeFiles/daemon.dir/daemon.cpp.o
+In file included from /root/citicash/src/daemon/daemon.cpp:39:
+In file included from /root/citicash/src/daemon/core.h:31:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_core.h:40:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_handler_common.h:34:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_defs.h:35:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/daemon/daemon.cpp:40:
+In file included from /root/citicash/src/daemon/p2p.h:34:
+In file included from /root/citicash/src/p2p/net_node.h:53:
+In file included from /root/citicash/src/p2p/net_peerlist.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+In file included from /root/citicash/src/daemon/daemon.cpp:34:
+In file included from /root/citicash/src/p2p/../../contrib/epee/include/misc_log_ex.h:40:
+In file included from /usr/include/c++/v1/map:442:
+/usr/include/c++/v1/__tree:1819:22: warning: the specified comparator type does not provide a const call operator
+      [-Wuser-defined-warnings]
+                     __trigger_diagnostics()), "");
+                     ^
+/usr/include/c++/v1/__tree:876:70: note: in instantiation of member function 'std::__1::__tree<std::__1::pair<std::__1::pair<unsigned
+      int, long>, crypto::hash>, cryptonote::txCompare, std::__1::allocator<std::__1::pair<std::__1::pair<unsigned int, long>,
+      crypto::hash> > >::~__tree' requested here
+    template <class, class, class> friend class _LIBCPP_TEMPLATE_VIS set;
+                                                                     ^
+/usr/include/c++/v1/__tree:970:7: note: from 'diagnose_if' attribute on '__trigger_diagnostics':
+      _LIBCPP_DIAGNOSE_WARNING(!__invokable<_Compare const&, _Tp const&, _Tp const&>::value,
+      ^                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/v1/__config:1130:20: note: expanded from macro '_LIBCPP_DIAGNOSE_WARNING'
+    __attribute__((diagnose_if(__VA_ARGS__, "warning")))
+                   ^           ~~~~~~~~~~~
+In file included from /root/citicash/src/daemon/daemon.cpp:39:
+In file included from /root/citicash/src/daemon/core.h:32:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_handler.h:171:
+/root/citicash/src/cryptonote_protocol/cryptonote_protocol_handler.inl:1113:40: warning: lambda capture 'arg' is not used
+      [-Wunused-lambda-capture]
+    m_p2p->for_each_connection([this, &arg, &fluffy_arg, &exclude_context, &fullConnections, &fluffyConnections](connection_conte...
+                                       ^
+/root/citicash/src/daemon/protocol.h:44:3: note: in instantiation of member function
+      'cryptonote::t_cryptonote_protocol_handler<cryptonote::core>::relay_block' requested here
+  t_protocol(
+  ^
+In file included from /root/citicash/src/daemon/daemon.cpp:39:
+In file included from /root/citicash/src/daemon/core.h:32:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_handler.h:171:
+/root/citicash/src/cryptonote_protocol/cryptonote_protocol_handler.inl:1113:46: warning: lambda capture 'fluffy_arg' is not used
+      [-Wunused-lambda-capture]
+    m_p2p->for_each_connection([this, &arg, &fluffy_arg, &exclude_context, &fullConnections, &fluffyConnections](connection_conte...
+                                             ^
+5 warnings generated.
+[ 86%] Building CXX object src/daemon/CMakeFiles/daemon.dir/executor.cpp.o
+[ 87%] Building CXX object src/daemon/CMakeFiles/daemon.dir/main.cpp.o
+In file included from /root/citicash/src/daemon/main.cpp:36:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_core.h:40:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_handler_common.h:34:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_defs.h:35:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/daemon/main.cpp:38:
+In file included from /root/citicash/src/daemon/command_server.h:45:
+In file included from /root/citicash/src/daemon/command_parser_executor.h:41:
+In file included from /root/citicash/src/daemon/rpc_command_executor.h:49:
+In file included from /root/citicash/src/p2p/net_node.h:53:
+In file included from /root/citicash/src/p2p/net_peerlist.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+/root/citicash/src/daemon/main.cpp:139:3: warning: bool literal returned from 'main' [-Wmain]
+                return false;
+                ^      ~~~~~
+3 warnings generated.
+[ 88%] Building CXX object src/daemon/CMakeFiles/daemon.dir/rpc_command_executor.cpp.o
+In file included from /root/citicash/src/daemon/rpc_command_executor.cpp:35:
+In file included from /root/citicash/src/daemon/rpc_command_executor.h:45:
+In file included from /root/citicash/src/common/rpc_client.h:35:
+In file included from /root/citicash/src/rpc/core_rpc_server_commands_defs.h:33:
+In file included from /root/citicash/src/cryptonote_protocol/cryptonote_protocol_defs.h:35:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/daemon/rpc_command_executor.cpp:35:
+In file included from /root/citicash/src/daemon/rpc_command_executor.h:49:
+In file included from /root/citicash/src/p2p/net_node.h:53:
+In file included from /root/citicash/src/p2p/net_peerlist.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+2 warnings generated.
+[ 89%] Linking CXX executable ../../bin/citicashd
+/usr/bin/ld: warning: libcrypto.so.8, needed by /usr/local/lib/libevent-2.1.so.6, may conflict with libcrypto.so.10
+[ 89%] Built target daemon
+Scanning dependencies of target cn_deserialize
+[ 90%] Building CXX object src/blockchain_utilities/CMakeFiles/cn_deserialize.dir/cn_deserialize.cpp.o
+In file included from /root/citicash/src/blockchain_utilities/cn_deserialize.cpp:30:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+1 warning generated.
+[ 91%] Linking CXX executable ../../bin/citicash-utils-deserialize
+[ 91%] Built target cn_deserialize
+Scanning dependencies of target blockchain_export
+[ 92%] Building CXX object src/blockchain_utilities/CMakeFiles/blockchain_export.dir/blockchain_export.cpp.o
+In file included from /root/citicash/src/blockchain_utilities/blockchain_export.cpp:30:
+In file included from /root/citicash/src/blockchain_utilities/bootstrap_file.h:37:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/blockchain_utilities/blockchain_export.cpp:31:
+In file included from /root/citicash/src/blockchain_utilities/blocksdat_file.h:38:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+/root/citicash/src/blockchain_utilities/blockchain_export.cpp:154:3: warning: bool literal returned from 'main' [-Wmain]
+  CHECK_AND_ASSERT_MES(r, false, "Failed to initialize source blockchain storage");
+  ^                       ~~~~~
+/root/citicash/contrib/epee/include/misc_log_ex.h:1440:97: note: expanded from macro 'CHECK_AND_ASSERT_MES'
+#define CHECK_AND_ASSERT_MES(expr, fail_ret_val, message)   do{if(!(expr)) {LOG_ERROR(message); return fail_ret_val;};}while(0)
+                                                                                                ^      ~~~~~~~~~~~~
+/root/citicash/src/blockchain_utilities/blockchain_export.cpp:168:3: warning: bool literal returned from 'main' [-Wmain]
+  CHECK_AND_ASSERT_MES(r, false, "Failed to export blockchain raw data");
+  ^                       ~~~~~
+/root/citicash/contrib/epee/include/misc_log_ex.h:1440:97: note: expanded from macro 'CHECK_AND_ASSERT_MES'
+#define CHECK_AND_ASSERT_MES(expr, fail_ret_val, message)   do{if(!(expr)) {LOG_ERROR(message); return fail_ret_val;};}while(0)
+                                                                                                ^      ~~~~~~~~~~~~
+In file included from /root/citicash/src/blockchain_utilities/blockchain_export.cpp:30:
+In file included from /root/citicash/src/blockchain_utilities/bootstrap_file.h:37:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:34:
+In file included from /usr/local/include/boost/variant.hpp:17:
+In file included from /usr/local/include/boost/variant/variant.hpp:21:
+In file included from /usr/local/include/boost/type_index.hpp:29:
+In file included from /usr/local/include/boost/type_index/stl_type_index.hpp:43:
+In file included from /usr/local/include/boost/container_hash/hash.hpp:760:
+In file included from /usr/local/include/boost/container_hash/extensions.hpp:22:
+In file included from /usr/local/include/boost/detail/container_fwd.hpp:94:
+In file included from /usr/include/c++/v1/map:442:
+/usr/include/c++/v1/__tree:1819:22: warning: the specified comparator type does not provide a const call operator
+      [-Wuser-defined-warnings]
+                     __trigger_diagnostics()), "");
+                     ^
+/usr/include/c++/v1/__tree:960:70: note: in instantiation of member function 'std::__1::__tree<std::__1::pair<std::__1::pair<unsigned
+      int, long>, crypto::hash>, cryptonote::txCompare, std::__1::allocator<std::__1::pair<std::__1::pair<unsigned int, long>,
+      crypto::hash> > >::~__tree' requested here
+    template <class, class, class> friend class _LIBCPP_TEMPLATE_VIS set;
+                                                                     ^
+/usr/include/c++/v1/__tree:970:7: note: from 'diagnose_if' attribute on '__trigger_diagnostics':
+      _LIBCPP_DIAGNOSE_WARNING(!__invokable<_Compare const&, _Tp const&, _Tp const&>::value,
+      ^                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/v1/__config:1130:20: note: expanded from macro '_LIBCPP_DIAGNOSE_WARNING'
+    __attribute__((diagnose_if(__VA_ARGS__, "warning")))
+                   ^           ~~~~~~~~~~~
+5 warnings generated.
+[ 93%] Building CXX object src/blockchain_utilities/CMakeFiles/blockchain_export.dir/bootstrap_file.cpp.o
+In file included from /root/citicash/src/blockchain_utilities/bootstrap_file.cpp:29:
+In file included from /root/citicash/src/blockchain_utilities/bootstrap_serialization.h:31:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+In file included from /root/citicash/src/blockchain_utilities/bootstrap_file.cpp:29:
+In file included from /root/citicash/src/blockchain_utilities/bootstrap_serialization.h:31:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:42:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+2 warnings generated.
+[ 94%] Building CXX object src/blockchain_utilities/CMakeFiles/blockchain_export.dir/blocksdat_file.cpp.o
+In file included from /root/citicash/src/blockchain_utilities/blocksdat_file.cpp:29:
+In file included from /root/citicash/src/blockchain_utilities/blocksdat_file.h:37:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/blockchain_utilities/blocksdat_file.cpp:29:
+In file included from /root/citicash/src/blockchain_utilities/blocksdat_file.h:38:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+2 warnings generated.
+[ 95%] Linking CXX executable ../../bin/citicash-blockchain-export
+[ 95%] Built target blockchain_export
+Scanning dependencies of target blockchain_import
+[ 96%] Building CXX object src/blockchain_utilities/CMakeFiles/blockchain_import.dir/blockchain_import.cpp.o
+In file included from /root/citicash/src/blockchain_utilities/blockchain_import.cpp:36:
+In file included from /root/citicash/src/blockchain_utilities/bootstrap_file.h:37:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/blockchain_utilities/blockchain_import.cpp:37:
+In file included from /root/citicash/src/blockchain_utilities/bootstrap_serialization.h:31:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+In file included from /root/citicash/src/blockchain_utilities/blockchain_import.cpp:36:
+In file included from /root/citicash/src/blockchain_utilities/bootstrap_file.h:37:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:34:
+In file included from /usr/local/include/boost/variant.hpp:17:
+In file included from /usr/local/include/boost/variant/variant.hpp:21:
+In file included from /usr/local/include/boost/type_index.hpp:29:
+In file included from /usr/local/include/boost/type_index/stl_type_index.hpp:43:
+In file included from /usr/local/include/boost/container_hash/hash.hpp:760:
+In file included from /usr/local/include/boost/container_hash/extensions.hpp:22:
+In file included from /usr/local/include/boost/detail/container_fwd.hpp:94:
+In file included from /usr/include/c++/v1/map:442:
+/usr/include/c++/v1/__tree:1819:22: warning: the specified comparator type does not provide a const call operator
+      [-Wuser-defined-warnings]
+                     __trigger_diagnostics()), "");
+                     ^
+/usr/include/c++/v1/__tree:960:70: note: in instantiation of member function 'std::__1::__tree<std::__1::pair<std::__1::pair<unsigned
+      int, long>, crypto::hash>, cryptonote::txCompare, std::__1::allocator<std::__1::pair<std::__1::pair<unsigned int, long>,
+      crypto::hash> > >::~__tree' requested here
+    template <class, class, class> friend class _LIBCPP_TEMPLATE_VIS set;
+                                                                     ^
+/usr/include/c++/v1/__tree:970:7: note: from 'diagnose_if' attribute on '__trigger_diagnostics':
+      _LIBCPP_DIAGNOSE_WARNING(!__invokable<_Compare const&, _Tp const&, _Tp const&>::value,
+      ^                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/v1/__config:1130:20: note: expanded from macro '_LIBCPP_DIAGNOSE_WARNING'
+    __attribute__((diagnose_if(__VA_ARGS__, "warning")))
+                   ^           ~~~~~~~~~~~
+3 warnings generated.
+[ 97%] Building CXX object src/blockchain_utilities/CMakeFiles/blockchain_import.dir/bootstrap_file.cpp.o
+In file included from /root/citicash/src/blockchain_utilities/bootstrap_file.cpp:29:
+In file included from /root/citicash/src/blockchain_utilities/bootstrap_serialization.h:31:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+In file included from /root/citicash/src/blockchain_utilities/bootstrap_file.cpp:29:
+In file included from /root/citicash/src/blockchain_utilities/bootstrap_serialization.h:31:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:42:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+2 warnings generated.
+[ 98%] Building CXX object src/blockchain_utilities/CMakeFiles/blockchain_import.dir/blocksdat_file.cpp.o
+In file included from /root/citicash/src/blockchain_utilities/blocksdat_file.cpp:29:
+In file included from /root/citicash/src/blockchain_utilities/blocksdat_file.h:37:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_basic.h:45:
+In file included from /root/citicash/src/serialization/crypto.h:37:
+In file included from /root/citicash/src/crypto/chacha8.h:44:
+/root/citicash/src/crypto/cn_slow_hash.hpp:53:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC target ("aes")
+            ^
+In file included from /root/citicash/src/blockchain_utilities/blocksdat_file.cpp:29:
+In file included from /root/citicash/src/blockchain_utilities/blocksdat_file.h:38:
+In file included from /root/citicash/src/cryptonote_core/cryptonote_boost_serialization.h:41:
+/root/citicash/external/boost/archive/portable_binary_oarchive.hpp:53:14: warning: comparison of two values with different enumeration
+      types in switch statement ('boost::archive::archive_exception::exception_code' and
+      'boost::archive::portable_binary_oarchive_exception::exception_code') [-Wenum-compare-switch]
+        case invalid_flags:
+             ^~~~~~~~~~~~~
+2 warnings generated.
+[100%] Linking CXX executable ../../bin/citicash-blockchain-import
+[100%] Built target blockchain_import
